@@ -1,8 +1,9 @@
+import { CaseFilesController } from './controllers/CaseFileController.js';
 import { ExampleController } from './controllers/ExampleController.js';
 
 class App {
 
-  ExampleController = new ExampleController() // ☑️ you can remove this - example only
+ caseFilesController = new CaseFilesController()
 
 }
 

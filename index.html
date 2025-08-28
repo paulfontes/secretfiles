@@ -22,7 +22,42 @@
     </nav>
   </header>
 
-  <main>
+  <main class="container-fluid">
+    <section class="row">
+      <!-- MAIN Active CaseFile -->
+       <div class="col-sm-9">
+        active thing goes here
+       </div>
+       <!-- 'name' attribute is super important it instructs the form on where to get the data -->
+       <!-- Side Bar Case File List -->
+        <div class="col-sm-3">
+          <form onsubmit="app.caseFileController.createCaseFile()" class="row card my-3">
+            <div>Create Case File</div>
+            <div class="mb-2 col-12 px-0 input-group">
+              <select required name="agency" id="case-file-agency" class="form-control">
+                <option value=""disabled selected>Please Select...</option>
+                <option value="NFS">NaFS</option>
+                <option value="SPC">SaPC</option>
+                <option value="USPS">UnSPS</option>
+                <option value="RAT">ReAT</option>
+                <option value="CCP">CoCP</option>
+                <option value="WET-SOC">WaET-SOX</option>
+
+              </select>
+              
+              <input required name="reported-date" type="date" id="case-file-reported-date" class="form-control w-25">
+            </div>
+            <div>
+              <button class="btn btn-teal w-100">
+                Create
+                <i class="mdi mdi-file-document-plus"></i></button>
+            </div>
+          </form>
+          <div id="case-file-list" class="row">
+
+          </div>
+        </div>
+    </section>
 
 
   </main>
