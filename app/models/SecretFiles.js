@@ -2,12 +2,13 @@ import { generateId } from "../utils/GenerateId.js"
 
 export class CaseFile {
     constructor(data) {
-        this.id = generateId()
+        this.id = data.id || generateId()
         this.agency = data.agency
         this.caseNumber = this.id.slice(this.id.length - 4).toUpperCase()
-        this.body = data.body
-        this.reportedDate = data.reportedDate
-        this.redactedDate = data.redactedDate
+        this.body = data.body || ''
+        this.reportedDate = new Date(data.reportedDate)
+        // Ternary is like inline 'if' statement
+        this.redactedDate = new Date(data.redactedDate) 
         
 
     }
@@ -27,7 +28,7 @@ export class CaseFile {
         <article class="card">
             <div class="card-body">
                 <h2>${this.agency} - ${this.caseNumber}</h2>
-                <div class="">${this.reportedDate}</div>
+                <div class="">${this.longReportDate}</div>
                 <div class="">${this.redactedDate}</div>
                 </div>
                 
@@ -37,5 +38,19 @@ export class CaseFile {
                 </form>
         </article>
         `
+    }
+
+    get shortReportedDate(){
+        return this.reportedDate.toLocaleDateString()
+    }
+
+    get longReportDate(){
+        return this.reportedDate.toLocaleDateString('en-US', {
+            year: "2-digit",
+            month: "long",
+            weekday: "long",
+            day: "2-digit"
+
+        })
     }
 }

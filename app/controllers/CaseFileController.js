@@ -10,6 +10,7 @@ export class CaseFilesController {
         this.drawActiveCaseFile()
         AppState.on('caseFiles', this.drawCaseFilesList)
         AppState.on('active-case-file', this.drawActiveCaseFile)
+        caseFilesService.loadCaseFileFromLocal()
     }
 // 2nd phase after making area in indexhtml for this to go into
     drawCaseFilesList(){

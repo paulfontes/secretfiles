@@ -28,7 +28,7 @@ class ObservableAppState extends EventEmitter {
     }),
   ]
 
-  /** @type {CaseFile[]} */
+  /** @type {CaseFile} */
   activeCaseFile = null
 
 }
