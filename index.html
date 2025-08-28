@@ -23,17 +23,17 @@
   </header>
 
   <main class="container-fluid">
-    <section class="row">
+    <section class="row mt-3">
       <!-- MAIN Active CaseFile -->
-       <div class="col-sm-9">
+       <div class="col-sm-9" id="active-case-file">
         active thing goes here
        </div>
        <!-- 'name' attribute is super important it instructs the form on where to get the data -->
        <!-- Side Bar Case File List -->
         <div class="col-sm-3">
-          <form onsubmit="app.caseFileController.createCaseFile()" class="row card my-3">
+          <form onsubmit="app.caseFileController.createCaseFile()" class="row card mb-3">
             <div>Create Case File</div>
-            <div class="mb-2 col-12 px-0 input-group">
+            <div class="mb-2 col-12  input-group">
               <select required name="agency" id="case-file-agency" class="form-control">
                 <option value=""disabled selected>Please Select...</option>
                 <option value="NFS">NaFS</option>
