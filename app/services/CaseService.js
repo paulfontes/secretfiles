@@ -3,7 +3,7 @@ import { CaseFile } from "../models/SecretFiles.js";
 
 class CaseFilesService {
 
-    /** @param {{}}} caseFileData  */
+    /** @param caseFileData  */
     createCaseFile(caseFileData){
         console.log('case data');
         

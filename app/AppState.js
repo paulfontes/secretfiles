@@ -6,6 +6,7 @@ class ObservableAppState extends EventEmitter {
 
 
   /** @type {CaseFile[]} */
+  
   caseFiles = [
     new CaseFile({
       agency: 'NFS',

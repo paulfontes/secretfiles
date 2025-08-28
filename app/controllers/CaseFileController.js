@@ -27,7 +27,9 @@ export class CaseFilesController {
         // }
         let caseFileData = getFormData(form)
         console.log('data', caseFileData);
-        caseFilesService.createCaseFile()
+        caseFilesService.createCaseFile(caseFileData)
+        // @ts-ignore
+        form.reset()
         
         
     }
